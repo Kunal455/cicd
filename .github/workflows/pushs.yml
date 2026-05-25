@@ -2,17 +2,17 @@ name: learn push trigger
 
 on:
   push:
-    branch:
+    branches:
       - main
-tagS:
-  - "v*"
+    tags:
+      - "v*"
 
-paths:
-  - "src/**"
-  - "package.json"
+    paths:
+      - "src/**"
+      - "package.json"
 
-paths-ignore:
-  - "**.md"
+    paths-ignore:
+      - "**.md"
 
 jobs:
   build:
