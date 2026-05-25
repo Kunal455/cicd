@@ -8,9 +8,9 @@ on:
       
 jobs:
   test:
-   runs-on: ubuntu latest
+   runs-on: ubuntu-latest
 
-  steps:
+   steps:
     - name: checkut code
       uses: actions/checkout@v4
       
@@ -20,7 +20,7 @@ jobs:
         node-version: 20
 
     - name: print
-      run: cd "hello pull reuest"
+      run: echo "hello pull reuest"
 
     - name: install 
       run: npm install
