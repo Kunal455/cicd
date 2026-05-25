@@ -8,5 +8,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - name: install node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
       - name: print
         run: echo "hello DEVOPS"
