@@ -1,0 +1,40 @@
+name: learn push trigger
+
+on:
+  push:
+    branch:
+      - main
+tagS:
+  - "v*"
+
+paths:
+  - "src/**"
+  - "package.json"
+
+paths-ignore:
+  - "**.md"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout Code
+        uses: actions/checkout@v4
+
+      - name: node js install
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Check Node version
+        run: node -v
+
+      - name: print start message
+        run: echo "Learning push event triggers"
+
+      - name: install dependencies
+        run: npm install
+
+      - name: test
+        run: npm test
