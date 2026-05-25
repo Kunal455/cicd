@@ -10,3 +10,5 @@ jobs:
     steps:
       - name: Print Message
         run: echo "Workflow started manually"
+
+        run: echo "Testing manual workflow"
