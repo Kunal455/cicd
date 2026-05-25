@@ -14,3 +14,7 @@ jobs:
           node-version: 20
       - name: print
         run: echo "hello DEVOPS"
+      - name: install
+        run: npm install
+      - name: test
+        run: npm test
