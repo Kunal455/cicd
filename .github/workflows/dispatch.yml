@@ -4,21 +4,23 @@ on:
   workflow_dispatch:
 
     inputs:
+
       version:
         description: "Enter application version"
         required: true
 
-      version:
-        description: "Enter deployment version"
+      environment:
+        description: "Enter deployment environment"
         required: true
 
-
 jobs:
+
   deploy:
 
     runs-on: ubuntu-latest
 
     steps:
+
       - name: print deployment details
         run: |
           echo "Deploying Version: ${{ github.event.inputs.version }}"
