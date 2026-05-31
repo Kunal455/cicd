@@ -1,7 +1,8 @@
 name: node ci-cd
 on:
   push:
-    - branch: main
+    branches:
+     - main
 
   jobs:
     build:
