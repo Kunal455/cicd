@@ -1,0 +1,29 @@
+name: Manual cicd
+
+on: 
+  workflow_dispatch:
+
+    inputs:
+
+      version:
+        description: "Appilcation verison"
+        required: true
+
+      environment:
+        description: "env name"
+        required: true
+
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: print inputs
+        run: |
+          echo "Version: ${{ github.event.inputs.version }}"
+          echo "Environment: ${{ github.event.inputs.environment }}"
+
+
+
